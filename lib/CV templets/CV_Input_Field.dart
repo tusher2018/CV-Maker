@@ -2,7 +2,6 @@
 
 import 'dart:convert';
 import 'dart:io';
-
 import 'package:camscanner/CV%20templets/cv_models.dart';
 import 'package:camscanner/CV%20templets/templets_1.dart';
 import 'package:camscanner/CV%20templets/templets_3.dart';
@@ -130,7 +129,7 @@ class _CvMakerState extends State<CvMaker> {
             currentStep = value;
           });
         },
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         currentStep: currentStep,
         onStepContinue: () {
           if (currentStep == 6) {
@@ -261,7 +260,7 @@ class _CvMakerState extends State<CvMaker> {
                     height: 5,
                   ),
                   ListView.builder(
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     itemCount: numbers.length,
                     itemBuilder: (context, index) => Row(
@@ -273,7 +272,7 @@ class _CvMakerState extends State<CvMaker> {
                               numbers.removeAt(index);
                               setState(() {});
                             },
-                            child: Icon(Icons.delete)),
+                            child: const Icon(Icons.delete)),
                       ],
                     ),
                   ),
@@ -312,7 +311,7 @@ class _CvMakerState extends State<CvMaker> {
                   ),
                   ListView.builder(
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemCount: skills.length,
                     itemBuilder: (context, index) => Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -323,7 +322,7 @@ class _CvMakerState extends State<CvMaker> {
                               skills.removeAt(index);
                               setState(() {});
                             },
-                            child: Icon(Icons.delete)),
+                            child: const Icon(Icons.delete)),
                       ],
                     ),
                   ),
@@ -350,7 +349,7 @@ class _CvMakerState extends State<CvMaker> {
                   ),
                   ListView.builder(
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemCount: languages.length,
                     itemBuilder: (context, index) => Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -361,7 +360,7 @@ class _CvMakerState extends State<CvMaker> {
                               languages.removeAt(index);
                               setState(() {});
                             },
-                            child: Icon(Icons.delete)),
+                            child: const Icon(Icons.delete)),
                       ],
                     ),
                   ),
@@ -388,7 +387,7 @@ class _CvMakerState extends State<CvMaker> {
                   ),
                   ListView.builder(
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemCount: hobboys.length,
                     itemBuilder: (context, index) => Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -399,7 +398,7 @@ class _CvMakerState extends State<CvMaker> {
                               hobboys.removeAt(index);
                               setState(() {});
                             },
-                            child: Icon(Icons.delete)),
+                            child: const Icon(Icons.delete)),
                       ],
                     ),
                   ),
@@ -454,13 +453,14 @@ class _CvMakerState extends State<CvMaker> {
                                 gpa: gpaController.text.trim().toString(),
                                 institutionName:
                                     instisutionName.text.trim().toString(),
-                                drgree: degree.text.trim().toString(),
+                                degree: degree.text.trim().toString(),
                                 year: educationYear.text.trim().toString(),
                                 description: educationkDescription.text
                                     .trim()
                                     .toString()));
                             instisutionName.text = "";
                             degree.text = "";
+                            gpaController.text = "";
                             educationYear.text = "";
                             educationkDescription.text = "";
                           } else {
@@ -472,9 +472,9 @@ class _CvMakerState extends State<CvMaker> {
                   ],
                 ),
                 ListView.separated(
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   separatorBuilder: (context, index) {
-                    return Divider();
+                    return const Divider();
                   },
                   shrinkWrap: true,
                   itemCount: education.length,
@@ -485,8 +485,8 @@ class _CvMakerState extends State<CvMaker> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            commonText(education[index].degree ?? ""),
                             commonText(education[index].institutionName ?? ""),
+                            commonText(education[index].degree ?? ""),
                             commonText(education[index].year ?? ""),
                             commonText(education[index].gpa ?? ""),
                             commonText(education[index].description ?? ""),
@@ -498,7 +498,7 @@ class _CvMakerState extends State<CvMaker> {
                             education.removeAt(index);
                             setState(() {});
                           },
-                          child: Icon(Icons.delete)),
+                          child: const Icon(Icons.delete)),
                     ],
                   ),
                 ),
@@ -576,9 +576,9 @@ class _CvMakerState extends State<CvMaker> {
                   ],
                 ),
                 ListView.separated(
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   separatorBuilder: (context, index) {
-                    return Divider();
+                    return const Divider();
                   },
                   shrinkWrap: true,
                   itemCount: training.length,
@@ -601,7 +601,7 @@ class _CvMakerState extends State<CvMaker> {
                             training.removeAt(index);
                             setState(() {});
                           },
-                          child: Icon(Icons.delete)),
+                          child: const Icon(Icons.delete)),
                     ],
                   ),
                 ),
@@ -673,9 +673,9 @@ class _CvMakerState extends State<CvMaker> {
                   ],
                 ),
                 ListView.separated(
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   separatorBuilder: (context, index) {
-                    return Divider();
+                    return const Divider();
                   },
                   shrinkWrap: true,
                   itemCount: projects.length,
@@ -699,7 +699,7 @@ class _CvMakerState extends State<CvMaker> {
                             projects.removeAt(index);
                             setState(() {});
                           },
-                          child: Icon(Icons.delete)),
+                          child: const Icon(Icons.delete)),
                     ],
                   ),
                 ),
@@ -765,9 +765,9 @@ class _CvMakerState extends State<CvMaker> {
                 ),
                 ListView.separated(
                   separatorBuilder: (context, index) {
-                    return Divider();
+                    return const Divider();
                   },
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemCount: experence.length,
                   itemBuilder: (context, index) => Row(
@@ -789,7 +789,207 @@ class _CvMakerState extends State<CvMaker> {
                             experence.removeAt(index);
                             setState(() {});
                           },
-                          child: Icon(Icons.delete)),
+                          child: const Icon(Icons.delete)),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Step(
+            title: commonTitleText("Volunteer"),
+            content: ListView(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              children: [
+                commonTextField(
+                    context: context, text: "Role", controller: role),
+                commonTextField(
+                    context: context,
+                    text: "Organization",
+                    controller: organization),
+                commonTextField(
+                    context: context,
+                    text: "Service Date",
+                    controller: serviceDate),
+                commonTextField(
+                    context: context, text: "Location", controller: location),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: commonText("Click Add now To add the details:",
+                          color: Colors.red),
+                    ),
+                    ElevatedButton(
+                        onPressed: () {
+                          if (role.text.trim().toString().isNotEmpty ||
+                              organization.text.trim().toString().isNotEmpty ||
+                              serviceDate.text.trim().toString().isNotEmpty ||
+                              location.text.trim().toString().isNotEmpty) {
+                            volenteer.add(Volunteer(
+                              role: role.text.trim().toString(),
+                              organization: organization.text.trim().toString(),
+                              dateService: serviceDate.text.trim().toString(),
+                              location: location.text.trim().toString(),
+                            ));
+
+                            commonsnakbar(context, massage: "Added");
+                          } else {
+                            commonsnakbar(context, massage: "Enter data");
+                          }
+                          setState(() {});
+                        },
+                        child: commonText("Add now")),
+                  ],
+                ),
+                ListView.separated(
+                  physics: const NeverScrollableScrollPhysics(),
+                  separatorBuilder: (context, index) {
+                    return const Divider();
+                  },
+                  shrinkWrap: true,
+                  itemCount: volenteer.length,
+                  itemBuilder: (context, index) => Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            commonText(volenteer[index].role ?? ""),
+                            commonText(volenteer[index].organization ?? ""),
+                            commonText(volenteer[index].dateService ?? ""),
+                            commonText(volenteer[index].location ?? ""),
+                          ],
+                        ),
+                      ),
+                      InkWell(
+                          onTap: () {
+                            volenteer.removeAt(index);
+                            setState(() {});
+                          },
+                          child: const Icon(Icons.delete)),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Step(
+            title: commonTitleText("Reference"),
+            content: ListView(
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              children: [
+                commonTextField(
+                    context: context, text: "Name", controller: referencerName),
+                commonTextField(
+                    context: context,
+                    text: "Title",
+                    controller: referencerTitle),
+                commonTextField(
+                    context: context,
+                    text: "Phone",
+                    controller: referencerPhone),
+                commonTextField(
+                    context: context,
+                    text: "Email",
+                    maxLine: 5,
+                    controller: referencerEmail),
+                commonTextField(
+                    context: context,
+                    text: "Relation",
+                    maxLine: 5,
+                    controller: referencerRelation),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: commonText("Click Add now To add the details:",
+                          color: Colors.red),
+                    ),
+                    ElevatedButton(
+                        onPressed: () {
+                          if (referencerName.text
+                                  .trim()
+                                  .toString()
+                                  .isNotEmpty ||
+                              referencerEmail.text
+                                  .trim()
+                                  .toString()
+                                  .isNotEmpty ||
+                              referencerPhone.text
+                                  .trim()
+                                  .toString()
+                                  .isNotEmpty ||
+                              referencerRelation.text
+                                  .trim()
+                                  .toString()
+                                  .isNotEmpty ||
+                              referencerTitle.text
+                                  .trim()
+                                  .toString()
+                                  .isNotEmpty ||
+                              referencerEmail.text
+                                  .trim()
+                                  .toString()
+                                  .isNotEmpty ||
+                              referencerPhone.text
+                                  .trim()
+                                  .toString()
+                                  .isNotEmpty ||
+                              referencerRelation.text
+                                  .trim()
+                                  .toString()
+                                  .isNotEmpty) {
+                            references.add(Reference(
+                                name: referencerName.text.trim().toString(),
+                                relation:
+                                    referencerRelation.text.trim().toString(),
+                                email: referencerEmail.text.trim().toString(),
+                                title: referencerTitle.text.trim().toString(),
+                                phone: referencerPhone.text.trim().toString()));
+                            companyName.text = "";
+                            workRole.text = "";
+                            workingYear.text = "";
+                            workDescription.text = "";
+                          } else {
+                            commonsnakbar(context, massage: "Enter all data");
+                          }
+                          setState(() {});
+                        },
+                        child: commonText("Add now")),
+                  ],
+                ),
+                ListView.separated(
+                  separatorBuilder: (context, index) {
+                    return const Divider();
+                  },
+                  physics: const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: references.length,
+                  itemBuilder: (context, index) => Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            commonText(references[index].name ?? ""),
+                            commonText(references[index].title ?? ""),
+                            commonText(references[index].relation ?? ""),
+                            commonText(references[index].phone ?? ""),
+                            commonText(references[index].email ?? ""),
+                          ],
+                        ),
+                      ),
+                      InkWell(
+                          onTap: () {
+                            references.removeAt(index);
+                            setState(() {});
+                          },
+                          child: const Icon(Icons.delete)),
                     ],
                   ),
                 ),
@@ -898,16 +1098,22 @@ class _CvMakerState extends State<CvMaker> {
     Volunteer(
         role: "Volunteer Teacher",
         organization: "Local School",
-        description: "Taught programming to high school students.",
-        date_service: "2021",
+        dateService: "2021",
         location: "Anytown, USA"),
     Volunteer(
         role: "Volunteer Teacher",
         organization: "Local School",
-        description: "Taught programming to high school students.",
-        date_service: "2021",
+        dateService: "2021",
         location: "Anytown, USA")
   ];
+
+  TextEditingController role = TextEditingController();
+
+  TextEditingController organization = TextEditingController();
+
+  TextEditingController serviceDate = TextEditingController();
+
+  TextEditingController location = TextEditingController();
 
   List<Reference> references = [
     Reference(
@@ -937,13 +1143,13 @@ class _CvMakerState extends State<CvMaker> {
   List<Education> education = [
     Education(
         institutionName: "State University",
-        drgree: "B.Sc. in Computer Science",
+        degree: "B.Sc. in Computer Science",
         year: "2010-2014",
         gpa: "3.8",
         description: "Graduated with honors."),
     Education(
         institutionName: "Tech Institute",
-        drgree: "M.Sc. in Software Engineering",
+        degree: "M.Sc. in Software Engineering",
         year: "2015-2017",
         gpa: "3.9",
         description: "Specialized in machine learning."),
@@ -1021,8 +1227,7 @@ class _CvMakerState extends State<CvMaker> {
             .map((e) => Volunteer(
                   role: e['role'],
                   organization: e['organization'],
-                  description: e['description'],
-                  date_service: e['date_service'],
+                  dateService: e['date_service'],
                   location: e['location'],
                 ))
             .toList()
@@ -1042,7 +1247,7 @@ class _CvMakerState extends State<CvMaker> {
         ? List<Map<String, dynamic>>.from(parsedJson['education'])
             .map((e) => Education(
                   institutionName: e['institutionName'],
-                  drgree: e['degree'],
+                  degree: e['degree'],
                   year: e['year'],
                   gpa: e['gpa'],
                   description: e['description'],

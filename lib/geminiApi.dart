@@ -9,10 +9,6 @@ Future<GenerateContentResponse> geminiApiCallWithImage(
   final model = GenerativeModel(
     model: "gemini-1.5-flash-latest",
     apiKey: "AIzaSyC5JLEGLd2I3u1kqeJ82G7FmREx6z590m0",
-    safetySettings: [
-      SafetySetting(HarmCategory.harassment, HarmBlockThreshold.high),
-      SafetySetting(HarmCategory.hateSpeech, HarmBlockThreshold.high),
-    ],
   );
 
   String formating = "";
@@ -58,7 +54,6 @@ Return the JSON using the following structure:
     {
       "role": \$role,
       "organization": \$organization,
-      "description": \$description,
       "date_service": \$date_service,
       "location": \$location
     },
@@ -100,6 +95,9 @@ New Data:
 - Analyze the given text and images.
 - Generate the "About Me" section best suited for the job post.
 - Return the combined JSON data with the structure mentioned above.
+
+Make sure Size of About Me text not more then 265 characters ;
+descriptions and other field content which will genarate make sure content around of 25 characters try not to go more then 50 characters ;
 
 Only provide the JSON so that I can decode it easily. Do not include any null values; use empty strings instead.
 """;
@@ -145,7 +143,6 @@ Return the JSON using the following structure:
     {
       "role": \$role,
       "organization": \$organization,
-      "description": \$description,
       "date_service": \$date_service,
       "location": \$location
     },
@@ -175,10 +172,15 @@ Return the JSON using the following structure:
   "languages": [\$language]
 }
 
+
+
 Data:
 - Analyze the given text and images.
 - Generate the "About Me" section best suited for the job post.
 - Return the combined JSON data with the structure mentioned above.
+
+Size of About Me text not more then 265  characters ;
+descriptions and other field content which will genarate make sure content around of 25 characters try not to go more then 50 characters ;
 
 Only provide the JSON so that I can decode it easily. Do not include any null values; use empty strings instead.
 """;

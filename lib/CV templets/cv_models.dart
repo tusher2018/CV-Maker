@@ -14,13 +14,13 @@ class Experience {
 
 class Education {
   String? institutionName, degree, year, gpa, description;
-  Education(
-      {this.institutionName,
-      this.description,
-      this.degree,
-      this.year,
-      this.gpa,
-      required drgree});
+  Education({
+    this.institutionName,
+    this.description,
+    this.degree,
+    this.year,
+    this.gpa,
+  });
 
   Map<String, dynamic> toJson() {
     return {
@@ -67,20 +67,18 @@ class Project {
 }
 
 class Volunteer {
-  String? role, organization, description, dateService, location;
-  Volunteer(
-      {this.dateService,
-      this.description,
-      this.location,
-      this.organization,
-      this.role,
-      required date_service});
+  String? role, organization, dateService, location;
+  Volunteer({
+    this.dateService,
+    this.location,
+    this.organization,
+    this.role,
+  });
 
   Map<String, dynamic> toJson() {
     return {
       'role': role,
       'organization': organization,
-      'description': description,
       'dateService': dateService,
       'location': location,
     };

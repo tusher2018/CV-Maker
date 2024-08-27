@@ -1372,11 +1372,9 @@ class _CvTemplate1State extends State<CvTemplate1> {
         if (organization.isNotEmpty)
           commonText(organization, color: Colors.black87, size: fontSize + 2),
         if (issue.isNotEmpty)
-          commonText("Issue Date: $issue",
-              color: Colors.black87, size: fontSize + 2),
+          commonText(issue, color: Colors.black87, size: fontSize + 2),
         if (expire.isNotEmpty)
-          commonText("Expiry Date: $expire",
-              color: Colors.black87, size: fontSize + 2),
+          commonText(expire, color: Colors.black87, size: fontSize + 2),
       ],
     );
   }
@@ -1395,17 +1393,7 @@ class _CvTemplate1State extends State<CvTemplate1> {
         if (description.isNotEmpty)
           commonText(description, color: Colors.black, size: fontSize),
         if (linking.isNotEmpty)
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              commonText("Project link:",
-                  color: Colors.black87, size: fontSize),
-              Expanded(
-                child: commonText(linking,
-                    color: Colors.blue.shade900, size: fontSize),
-              ),
-            ],
-          ),
+          commonText(linking, color: Colors.blue.shade900, size: fontSize),
       ],
     );
   }
@@ -1420,13 +1408,11 @@ class _CvTemplate1State extends State<CvTemplate1> {
         if (title.isNotEmpty)
           commonText(title, color: Colors.black87, size: fontSize + 2),
         if (phone.isNotEmpty)
-          commonText("Contact Number: $phone",
-              color: Colors.black87, size: fontSize),
+          commonText(phone, color: Colors.black87, size: fontSize),
         if (email.isNotEmpty)
-          commonText("Email: $email", color: Colors.black87, size: fontSize),
+          commonText(email, color: Colors.black87, size: fontSize),
         if (relation.isNotEmpty)
-          commonText("Relationship: $relation",
-              color: Colors.black87, size: fontSize),
+          commonText(relation, color: Colors.black87, size: fontSize),
       ],
     );
   }
@@ -1441,11 +1427,9 @@ class _CvTemplate1State extends State<CvTemplate1> {
         if (organization.isNotEmpty)
           commonText(organization, color: Colors.black87, size: fontSize + 2),
         if (dateService.isNotEmpty)
-          commonText("Service Date: $dateService",
-              color: Colors.black, size: fontSize),
+          commonText(dateService, color: Colors.black, size: fontSize),
         if (location.isNotEmpty)
-          commonText("Location: $location",
-              color: Colors.black87, size: fontSize),
+          commonText("$location", color: Colors.black87, size: fontSize),
       ],
     );
   }
