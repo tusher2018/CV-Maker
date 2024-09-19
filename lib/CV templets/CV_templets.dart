@@ -7,7 +7,11 @@ class CvTemplatesPage extends StatelessWidget {
   final List<String> cvTemplatesPath = [
     'assets/imges/t1.jpg',
     'assets/imges/t2.jpg',
-    'assets/imges/t3.jpg',
+    'assets/imges/t3.png',
+    'assets/imges/t4.jpg',
+    'assets/imges/t5.jpg',
+    'assets/imges/t6.jpg',
+    'assets/imges/t7.jpg',
     // Add more as needed
   ];
 
@@ -21,7 +25,7 @@ class CvTemplatesPage extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
           itemCount: cvTemplatesPath.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             childAspectRatio: 0.6,
             crossAxisSpacing: 8.0,
@@ -52,7 +56,7 @@ class CvTemplatesPage extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                           'Template ${index + 1}',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontWeight: FontWeight.bold,
                           ),
                         ),

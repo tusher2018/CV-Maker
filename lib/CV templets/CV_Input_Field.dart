@@ -5,6 +5,10 @@ import 'dart:io';
 import 'package:camscanner/CV%20templets/cv_models.dart';
 import 'package:camscanner/CV%20templets/templets_1.dart';
 import 'package:camscanner/CV%20templets/templets_3.dart';
+import 'package:camscanner/CV%20templets/templets_4.dart';
+import 'package:camscanner/CV%20templets/templets_5.dart';
+import 'package:camscanner/CV%20templets/templets_6.dart';
+import 'package:camscanner/CV%20templets/templets_7.dart';
 import 'package:camscanner/common_widget.dart';
 
 import 'package:flutter/material.dart';
@@ -117,6 +121,82 @@ class _CvMakerState extends State<CvMaker> {
             sumarryText: sumarryText.text,
             training: training,
             volenteer: volenteer);
+      case 4:
+        return CvTemplate4(
+            imageFile: imageFile,
+            aboutMe: aboutMe.text,
+            address: address.text,
+            education: education,
+            email: email.text,
+            experence: experence,
+            hobboys: hobboys,
+            languages: languages,
+            name: name.text,
+            numbers: numbers,
+            profession: profession.text,
+            projects: projects,
+            references: references,
+            skills: skills,
+            sumarryText: sumarryText.text,
+            training: training,
+            volenteer: volenteer);
+      case 5:
+        return CvTemplate5(
+            imageFile: imageFile,
+            aboutMe: aboutMe.text,
+            address: address.text,
+            education: education,
+            email: email.text,
+            experence: experence,
+            hobboys: hobboys,
+            languages: languages,
+            name: name.text,
+            numbers: numbers,
+            profession: profession.text,
+            projects: projects,
+            references: references,
+            skills: skills,
+            sumarryText: sumarryText.text,
+            training: training,
+            volenteer: volenteer);
+      case 6:
+        return CvTemplate6(
+            imageFile: imageFile,
+            aboutMe: aboutMe.text,
+            address: address.text,
+            education: education,
+            email: email.text,
+            experence: experence,
+            hobboys: hobboys,
+            languages: languages,
+            name: name.text,
+            numbers: numbers,
+            profession: profession.text,
+            projects: projects,
+            references: references,
+            skills: skills,
+            sumarryText: sumarryText.text,
+            training: training,
+            volenteer: volenteer);
+      case 7:
+        return CvTemplate7(
+            imageFile: imageFile,
+            aboutMe: aboutMe.text,
+            address: address.text,
+            education: education,
+            email: email.text,
+            experence: experence,
+            hobboys: hobboys,
+            languages: languages,
+            name: name.text,
+            numbers: numbers,
+            profession: profession.text,
+            projects: projects,
+            references: references,
+            skills: skills,
+            sumarryText: sumarryText.text,
+            training: training,
+            volenteer: volenteer);
       default:
         return Container();
     }
@@ -132,7 +212,7 @@ class _CvMakerState extends State<CvMaker> {
         physics: const BouncingScrollPhysics(),
         currentStep: currentStep,
         onStepContinue: () {
-          if (currentStep == 6) {
+          if (currentStep == 8) {
             print(currentHight);
             Navigator.push(context, MaterialPageRoute(
               builder: (context) {
@@ -166,7 +246,7 @@ class _CvMakerState extends State<CvMaker> {
                   child: Center(
                     child: ElevatedButton(
                         onPressed: details.onStepContinue,
-                        child: (currentStep == 6)
+                        child: (currentStep == 8)
                             ? commonText("Preview")
                             : commonText("Next")),
                   ),
