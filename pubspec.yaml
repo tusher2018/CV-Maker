@@ -33,15 +33,15 @@ dependencies:
   http: ^1.2.1
   flutter_rating_bar: ^4.0.1
   speech_to_text: ^6.6.2
-  flutter_launcher_icons: ^0.13.1  
+  # flutter_launcher_icons: ^0.13.1  
 
 
-flutter_launcher_icons:
-  android: true
-  ios: true
-  image_path: "assets/imges/logo.jpg"
-  adaptive_icon_foreground: "assets/imges/logo.jpg"
-  adaptive_icon_background: "#000000"
+# flutter_launcher_icons:
+#   android: true
+#   ios: true
+#   image_path: "assets/imges/logo.jpg"
+#   adaptive_icon_foreground: "assets/imges/logo.jpg"
+#   adaptive_icon_background: "#000000"
 
 
 dev_dependencies:
