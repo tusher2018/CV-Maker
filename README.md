@@ -1,16 +1,13 @@
-# camscanner
+## Flutter Resume Builder App
+Developed a Flutter Resume Builder App with features for creating, customizing, and exporting resumes, enabling users to generate professional documents effortlessly.
 
-A new Flutter project.
+🔹 Technologies Used: Flutter, Firebase, API
+🔹 Key Skills: Software Development, Android Development, Mobile Applications, Flutter, Application Development
 
-## Getting Started
+# 📥 Download Here: Resume Builder APK
 
-This project is a starting point for a Flutter application.
+![cvmake](https://github.com/user-attachments/assets/1b92acb3-d99d-4e45-8e7a-56c333b26cf2)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
